@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashunspach — Prochain événement à venir</title>
+<style>
+  :root {
+    --ink: #1f2e26;
+    --paper: #f4f2ec;
+    --moss: #2f5233;
+    --moss-dark: #223d26;
+    --gold: #c9973a;
+    --line: rgba(31, 46, 38, 0.15);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 32px 20px;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(47, 82, 51, 0.06), transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(201, 151, 58, 0.08), transparent 45%);
+  }
+
+  .card {
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .mark {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 600;
+    margin-bottom: 28px;
+  }
+
+  .mark::before, .mark::after {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+
+  h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--moss-dark);
+    margin-bottom: 16px;
+  }
+
+  .lede {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(31, 46, 38, 0.75);
+    max-width: 440px;
+    margin: 0 auto 40px;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 0 auto 36px;
+    width: 60px;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    padding: 15px 24px;
+    border-radius: 3px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    display: block;
+  }
+
+  .btn:hover { transform: translateY(-1px); }
+
+  .btn-primary {
+    background: var(--moss);
+    color: var(--paper);
+    box-shadow: 0 2px 0 var(--moss-dark);
+  }
+  .btn-primary:hover { box-shadow: 0 4px 8px rgba(34, 61, 38, 0.35); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--moss-dark);
+    border: 1px solid var(--line);
+  }
+  .btn-secondary:hover { border-color: var(--moss); background: rgba(47, 82, 51, 0.04); }
+
+  .socials {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+  }
+
+  .socials a {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    color: rgba(31, 46, 38, 0.6);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .socials a:hover { color: var(--moss-dark); border-bottom-color: var(--gold); }
+
+  footer {
+    margin-top: 48px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+    color: rgba(31, 46, 38, 0.45);
+  }
+  footer a { color: inherit; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="mark">Ashunspach</div>
+
+    <h1>Pas d'événement prévu pour le moment.</h1>
+    <p class="lede">
+      Mais on prépare déjà la suite. Laissez-nous un moyen de vous prévenir
+      dès qu'une date sera fixée — vous serez parmi les premiers informés.
+    </p>
+
+    <hr class="divider">
+
+    <div class="actions">
+      <a class="btn btn-primary" href="https://www.instagram.com/VOTRE_COMPTE" target="_blank" rel="noopener">
+        Suivre sur Instagram
+      </a>
+      <a class="btn btn-secondary" href="mailto:contact@ashunspach.com?subject=Inscription%20newsletter">
+        Recevoir les prochaines dates par e-mail
+      </a>
+      <a class="btn btn-secondary" href="https://www.helloasso.com/associations/VOTRE-ASSOCIATION" target="_blank" rel="noopener">
+        Soutenir l'association
+      </a>
+    </div>
+
+    <div class="socials">
+      <a href="https://www.facebook.com/VOTRE_PAGE" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://ashunspach.com" target="_blank" rel="noopener">Site de l'association</a>
+    </div>
+
+    <footer>
+      &copy; <span id="year"></span> Ashunspach — <a href="https://ashunspach.com">ashunspach.com</a>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
