@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ashunspach — Prochain événement à venir</title>
+<title>AS Hunspach — Prochain événement à venir</title>
 <style>
   :root {
     --ink: #1f2e26;
@@ -40,7 +40,14 @@
     text-align: center;
   }
 
-  .mark {
+  .logo {
+    width: 96px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .eyebrow {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 12px;
     letter-spacing: 0.28em;
@@ -48,16 +55,6 @@
     color: var(--moss);
     font-weight: 600;
     margin-bottom: 28px;
-  }
-
-  .mark::before, .mark::after {
-    content: "";
-    display: inline-block;
-    width: 28px;
-    height: 1px;
-    background: var(--gold);
-    vertical-align: middle;
-    margin: 0 10px;
   }
 
   h1 {
@@ -152,7 +149,8 @@
 <body>
 
   <div class="card">
-    <div class="mark">Ashunspach</div>
+    <img class="logo" src="logo.png" alt="Logo AS Hunspach">
+    <div class="eyebrow">AS Hunspach</div>
 
     <h1>Pas d'événement prévu pour le moment.</h1>
     <p class="lede">
@@ -163,24 +161,24 @@
     <hr class="divider">
 
     <div class="actions">
-      <a class="btn btn-primary" href="https://www.instagram.com/VOTRE_COMPTE" target="_blank" rel="noopener">
+      <a class="btn btn-primary" href="https://www.instagram.com/as_hunspach" target="_blank" rel="noopener">
         Suivre sur Instagram
       </a>
-      <a class="btn btn-secondary" href="mailto:contact@ashunspach.com?subject=Inscription%20newsletter">
+      <a class="btn btn-secondary" href="mailto:Events@ashunspach.com?subject=Inscription%20newsletter">
         Recevoir les prochaines dates par e-mail
       </a>
-      <a class="btn btn-secondary" href="https://www.helloasso.com/associations/VOTRE-ASSOCIATION" target="_blank" rel="noopener">
+      <a class="btn btn-secondary" href="https://www.helloasso.com/associations/association-sportive-hunspach/formulaires/1" target="_blank" rel="noopener">
         Soutenir l'association
       </a>
     </div>
 
     <div class="socials">
-      <a href="https://www.facebook.com/VOTRE_PAGE" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/as_hunspach" target="_blank" rel="noopener">Instagram</a>
       <a href="https://ashunspach.com" target="_blank" rel="noopener">Site de l'association</a>
     </div>
 
     <footer>
-      &copy; <span id="year"></span> Ashunspach — <a href="https://ashunspach.com">ashunspach.com</a>
+      &copy; <span id="year"></span> AS Hunspach — <a href="https://ashunspach.com">ashunspach.com</a>
     </footer>
   </div>
 
