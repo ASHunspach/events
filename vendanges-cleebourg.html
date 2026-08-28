@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AS Hunspach — Le coin des vendangeurs</title>
+<style>
+  :root {
+    --ink: #1f2e26;
+    --paper: #f4f2ec;
+    --moss: #2f5233;
+    --moss-dark: #223d26;
+    --gold: #c9973a;
+    --line: rgba(31, 46, 38, 0.15);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { height: 100%; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 32px 20px;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(47, 82, 51, 0.06), transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(201, 151, 58, 0.08), transparent 45%);
+  }
+
+  .card {
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo {
+    width: 84px;
+    height: auto;
+    display: block;
+    margin: 0 auto 16px;
+  }
+
+  .eyebrow {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+
+  .poster {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 4px;
+    margin: 0 auto 28px;
+    display: block;
+    box-shadow: 0 8px 24px rgba(31, 46, 38, 0.15);
+  }
+
+  .date-badge {
+    display: inline-block;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--moss-dark);
+    background: rgba(201, 151, 58, 0.15);
+    border: 1px solid rgba(201, 151, 58, 0.4);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--moss-dark);
+    margin-bottom: 14px;
+  }
+
+  .lede {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(31, 46, 38, 0.75);
+    max-width: 440px;
+    margin: 0 auto 20px;
+  }
+
+  .details {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    color: rgba(31, 46, 38, 0.65);
+    margin-bottom: 32px;
+    line-height: 1.8;
+  }
+  .details strong { color: var(--moss-dark); }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 0 auto 32px;
+    width: 60px;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 16px 24px;
+    border-radius: 3px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    display: block;
+  }
+  .btn:hover { transform: translateY(-1px); }
+
+  .btn-primary {
+    background: var(--moss);
+    color: var(--paper);
+    box-shadow: 0 2px 0 var(--moss-dark);
+  }
+  .btn-primary:hover { box-shadow: 0 4px 8px rgba(34, 61, 38, 0.35); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--moss-dark);
+    border: 1px solid var(--line);
+  }
+  .btn-secondary:hover { border-color: var(--moss); background: rgba(47, 82, 51, 0.04); }
+
+  footer {
+    margin-top: 44px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+    color: rgba(31, 46, 38, 0.45);
+  }
+  footer a { color: inherit; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <img class="logo" src="logo.png" alt="Logo AS Hunspach">
+    <div class="eyebrow">AS Hunspach</div>
+
+    <div class="date-badge">Vendredi 9 octobre 2026</div>
+
+    <h1>Le coin des vendangeurs</h1>
+    <p class="lede">
+      Une soirée conviviale à la cave vinicole de Cleebourg, au cœur des
+      vendanges — au menu, Fleischknepfle et Spaetzle faits maison.
+    </p>
+
+    <p class="details">
+      <strong>Lieu :</strong> Cave vinicole de Cleebourg<br>
+      <strong>Menu :</strong> Fleischknepfle avec Spaetzle
+    </p>
+
+    <hr class="divider">
+
+    <div class="actions">
+      <a class="btn btn-primary" href="tel:+33682675421">
+        Réserver — 06 82 67 54 21
+      </a>
+      <a class="btn btn-secondary" href="https://ashunspach.com" target="_blank" rel="noopener">
+        En savoir plus sur l'association
+      </a>
+    </div>
+
+    <footer>
+      &copy; <span id="year"></span> AS Hunspach — <a href="https://ashunspach.com">ashunspach.com</a>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
