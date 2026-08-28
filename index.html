@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AS Hunspach — Prochain événement à venir</title>
+<title>AS Hunspach — Le coin des vendangeurs</title>
 <style>
   :root {
     --ink: #1f2e26;
@@ -16,9 +16,7 @@
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html, body {
-    height: 100%;
-  }
+  html, body { height: 100%; }
 
   body {
     background: var(--paper);
@@ -41,10 +39,10 @@
   }
 
   .logo {
-    width: 96px;
+    width: 84px;
     height: auto;
     display: block;
-    margin: 0 auto 20px;
+    margin: 0 auto 16px;
   }
 
   .eyebrow {
@@ -54,15 +52,38 @@
     text-transform: uppercase;
     color: var(--moss);
     font-weight: 600;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
+  }
+
+  .poster {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 4px;
+    margin: 0 auto 28px;
+    display: block;
+    box-shadow: 0 8px 24px rgba(31, 46, 38, 0.15);
+  }
+
+  .date-badge {
+    display: inline-block;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--moss-dark);
+    background: rgba(201, 151, 58, 0.15);
+    border: 1px solid rgba(201, 151, 58, 0.4);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
   }
 
   h1 {
-    font-size: clamp(28px, 5vw, 40px);
+    font-size: clamp(28px, 5vw, 42px);
     font-weight: 500;
-    line-height: 1.25;
+    line-height: 1.2;
     color: var(--moss-dark);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .lede {
@@ -71,13 +92,22 @@
     line-height: 1.6;
     color: rgba(31, 46, 38, 0.75);
     max-width: 440px;
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
   }
+
+  .details {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    color: rgba(31, 46, 38, 0.65);
+    margin-bottom: 32px;
+    line-height: 1.8;
+  }
+  .details strong { color: var(--moss-dark); }
 
   .divider {
     border: none;
     border-top: 1px solid var(--line);
-    margin: 0 auto 36px;
+    margin: 0 auto 32px;
     width: 60px;
   }
 
@@ -93,14 +123,12 @@
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 15px;
     font-weight: 600;
-    letter-spacing: 0.01em;
     text-decoration: none;
-    padding: 15px 24px;
+    padding: 16px 24px;
     border-radius: 3px;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
     display: block;
   }
-
   .btn:hover { transform: translateY(-1px); }
 
   .btn-primary {
@@ -117,24 +145,8 @@
   }
   .btn-secondary:hover { border-color: var(--moss); background: rgba(47, 82, 51, 0.04); }
 
-  .socials {
-    margin-top: 28px;
-    display: flex;
-    justify-content: center;
-    gap: 22px;
-  }
-
-  .socials a {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 13px;
-    color: rgba(31, 46, 38, 0.6);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-  }
-  .socials a:hover { color: var(--moss-dark); border-bottom-color: var(--gold); }
-
   footer {
-    margin-top: 48px;
+    margin-top: 44px;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 12px;
     color: rgba(31, 46, 38, 0.45);
@@ -152,29 +164,28 @@
     <img class="logo" src="logo.png" alt="Logo AS Hunspach">
     <div class="eyebrow">AS Hunspach</div>
 
-    <h1>Pas d'événement prévu pour le moment.</h1>
+    <div class="date-badge">Vendredi 9 octobre 2026</div>
+
+    <h1>Le coin des vendangeurs</h1>
     <p class="lede">
-      Mais on prépare déjà la suite. Laissez-nous un moyen de vous prévenir
-      dès qu'une date sera fixée — vous serez parmi les premiers informés.
+      Une soirée conviviale à la cave vinicole de Cleebourg, au cœur des
+      vendanges — au menu, Fleischknepfle et Spaetzle faits maison.
+    </p>
+
+    <p class="details">
+      <strong>Lieu :</strong> Cave vinicole de Cleebourg<br>
+      <strong>Menu :</strong> Fleischknepfle avec Spaetzle
     </p>
 
     <hr class="divider">
 
     <div class="actions">
-      <a class="btn btn-primary" href="https://www.instagram.com/as_hunspach" target="_blank" rel="noopener">
-        Suivre sur Instagram
+      <a class="btn btn-primary" href="tel:+33682675421">
+        Réserver — 06 82 67 54 21
       </a>
-      <a class="btn btn-secondary" href="mailto:Events@ashunspach.com?subject=Inscription%20newsletter">
-        Recevoir les prochaines dates par e-mail
+      <a class="btn btn-secondary" href="https://ashunspach.com" target="_blank" rel="noopener">
+        En savoir plus sur l'association
       </a>
-      <a class="btn btn-secondary" href="https://www.helloasso.com/associations/association-sportive-hunspach/formulaires/1" target="_blank" rel="noopener">
-        Soutenir l'association
-      </a>
-    </div>
-
-    <div class="socials">
-      <a href="https://www.instagram.com/as_hunspach" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://ashunspach.com" target="_blank" rel="noopener">Site de l'association</a>
     </div>
 
     <footer>
